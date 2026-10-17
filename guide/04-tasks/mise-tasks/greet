@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#MISE description="Greet someone with src/greet.js"
+#USAGE arg "<name>" help="Who to greet"
+#USAGE flag "-u --upper" help="Print in upper case"
+set -euo pipefail
+
+msg=$(node -e 'console.log(require("./src/greet.js").greet(process.argv[1]))' "$usage_name")
+if [ "${usage_upper:-false}" = "true" ]; then
+  msg=$(echo "$msg" | tr '[:lower:]' '[:upper:]')
+fi
+echo "$msg"

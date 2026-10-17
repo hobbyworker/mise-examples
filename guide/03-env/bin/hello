@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "$GREETING ($APP_ENV, log level $LOG_LEVEL)"
+echo "data: $DATA_DIR"
+echo "api:  $API_URL"

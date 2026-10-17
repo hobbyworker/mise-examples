@@ -1,0 +1,9 @@
+[env]
+APP_ENV = "development"
+LOG_LEVEL = "debug"
+DATA_DIR = "{{config_root}}/data"
+API_URL = { default = "http://localhost:8080" }
+API_TOKEN = { required = "Set API_TOKEN in mise.local.toml" }
+_.file = ".env"
+_.path = ["bin"]
+_.source = "scripts/env.sh"

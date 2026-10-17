@@ -1,0 +1,6 @@
+[tools]
+node = "24"
+
+[tasks.start]
+description = "Print a greeting"
+run = "node hello.js"

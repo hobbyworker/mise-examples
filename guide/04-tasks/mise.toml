@@ -1,0 +1,26 @@
+[tools]
+node = "24"
+
+[env]
+GREETING = "Hello"
+
+[tasks.hello]
+description = "Print a greeting"
+run = "echo $GREETING from mise"
+
+[tasks.test]
+description = "Run the tests"
+run = "node --test"
+
+[tasks.build]
+description = "Copy the source to dist"
+sources = ["src/**/*.js"]
+outputs = ["dist/greet.js"]
+run = [
+  "mkdir -p dist",
+  "cp src/greet.js dist/greet.js",
+]
+
+[tasks.check]
+description = "Run the tests and the build"
+depends = ["test", "build"]

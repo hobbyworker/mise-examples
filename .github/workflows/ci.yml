@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tools:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: guide/02-tools
+    steps:
+      - uses: actions/checkout@v7
+      - uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+        with:
+          version: 2026.10.11
+          working_directory: guide/02-tools
+      - run: mise ls --current
+      - run: rg --version
+
+  env:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: guide/03-env
+    steps:
+      - uses: actions/checkout@v7
+      - run: cp .env.example .env && cp mise.local.toml.example mise.local.toml
+      - uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+        with:
+          version: 2026.10.11
+          working_directory: guide/03-env
+      - run: echo "APP_ENV=$APP_ENV API_URL=$API_URL"
+      - run: mise exec -- hello
+
+  tasks:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: guide/04-tasks
+    steps:
+      - uses: actions/checkout@v7
+      - uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+        with:
+          version: 2026.10.11
+          working_directory: guide/04-tasks
+      - run: mise run check
+      - run: mise run greet --upper ci
+
+  locked:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: guide/05-version-files/locked
+    steps:
+      - uses: actions/checkout@v7
+      - uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+        with:
+          version: 2026.10.11
+          working_directory: guide/05-version-files/locked
+      - run: mise ls --current
+      - run: node --version
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: docker build -t mise-docker guide/06-docker
+      - run: docker run --rm mise-docker
