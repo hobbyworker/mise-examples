@@ -1,0 +1,2 @@
+mise installs the tools, and the package tools install the packages.
+mise picks the versions; uv, npm, Bundler, Gradle and cargo pick the dependencies.

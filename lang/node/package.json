@@ -1,0 +1,24 @@
+{
+  "name": "wordcount",
+  "version": "1.0.0",
+  "description": "Count the words in text files",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "wordcount": "bin/wordcount.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.14.0",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.14.0",
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  }
+}

@@ -1,0 +1,18 @@
+[tools]
+ruby = "4.0"
+
+[tasks.install]
+description = "Install the gems"
+run = "bundle install"
+
+[tasks.test]
+description = "Run the tests"
+run = "bundle exec rake test"
+
+[tasks.count]
+description = "Count the words in sample.txt"
+run = "bin/wordcount sample.txt"
+
+[tasks.ci]
+description = "Run the CI checks"
+run = [{ task = "install" }, { task = "test" }, { task = "count" }]

@@ -1,0 +1,21 @@
+[tools]
+python = "3.15"
+uv = "0.13"
+
+[env]
+UV_PYTHON = { value = "{{ tools.python.path }}", tools = true }
+
+[settings]
+python.uv_venv_auto = "create|source"
+
+[tasks.test]
+description = "Run the tests"
+run = "uv run pytest -q"
+
+[tasks.count]
+description = "Count the words in sample.txt"
+run = "uv run wordcount sample.txt"
+
+[tasks.ci]
+description = "Run the CI checks"
+run = [{ task = "test" }, { task = "count" }]

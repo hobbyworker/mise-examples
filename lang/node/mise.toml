@@ -1,0 +1,23 @@
+[tools]
+node = "24"
+pnpm = "12"
+
+[tasks.install]
+description = "Install the dependencies"
+run = "pnpm install --frozen-lockfile"
+
+[tasks.test]
+description = "Run the tests"
+run = "node --test"
+
+[tasks.lint]
+description = "Check the formatting"
+run = "pnpm exec prettier --check ."
+
+[tasks.count]
+description = "Count the words in sample.txt"
+run = "node bin/wordcount.js sample.txt"
+
+[tasks.ci]
+description = "Run the CI checks"
+run = [{ task = "install" }, { tasks = ["test", "lint"] }, { task = "count" }]

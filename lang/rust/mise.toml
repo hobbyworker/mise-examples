@@ -1,0 +1,18 @@
+[tools]
+rust = { version = "1.99", profile = "minimal", components = ["rustfmt", "clippy"] }
+
+[tasks.test]
+description = "Run the tests"
+run = "cargo test"
+
+[tasks.lint]
+description = "Check the formatting and run clippy"
+run = ["cargo fmt --check", "cargo clippy -- -D warnings"]
+
+[tasks.count]
+description = "Count the words in sample.txt"
+run = "cargo run --quiet -- sample.txt"
+
+[tasks.ci]
+description = "Run the CI checks"
+run = [{ task = "lint" }, { task = "test" }, { task = "count" }]

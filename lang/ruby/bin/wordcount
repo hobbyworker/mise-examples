@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative "../lib/wordcount"
+
+ARGV.each do |path|
+  counts = WordCount.count_words(File.read(path, encoding: "utf-8"))
+  puts "#{path}: #{counts.values.sum} words"
+  WordCount.most_common(counts, 3).each do |word, n|
+    puts "  #{word.ljust(8)} #{n}"
+  end
+end

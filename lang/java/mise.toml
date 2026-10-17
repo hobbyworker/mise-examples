@@ -1,0 +1,14 @@
+[tools]
+java = "25"
+
+[tasks.test]
+description = "Run the tests"
+run = "./gradlew test"
+
+[tasks.count]
+description = "Count the words in sample.txt"
+run = "./gradlew --quiet run --args=sample.txt"
+
+[tasks.ci]
+description = "Run the CI checks"
+run = [{ task = "test" }, { task = "count" }]

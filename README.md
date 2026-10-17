@@ -21,20 +21,20 @@ The same small program, a word counter with a test, in each language. Each folde
 
 | Part | Post | Folder |
 |---|---|---|
-| 1 | [Python and uv](https://hobbyworker.me/en/dev/2026-10-24-mise-by-language-1-python-and-uv/) | `lang/python` |
-| 2 | [Node.js with npm and pnpm](https://hobbyworker.me/en/dev/2026-10-25-mise-by-language-2-nodejs-npm-pnpm/) | `lang/node` |
-| 3 | [Ruby and Bundler](https://hobbyworker.me/en/dev/2026-10-26-mise-by-language-3-ruby-and-bundler/) | `lang/ruby` |
-| 4 | [Java and Gradle](https://hobbyworker.me/en/dev/2026-10-27-mise-by-language-4-java-and-gradle/) | `lang/java` |
-| 5 | [Rust and cargo](https://hobbyworker.me/en/dev/2026-10-28-mise-by-language-5-rust-and-cargo/) | `lang/rust` |
+| 1 | [Python and uv](https://hobbyworker.me/en/dev/2026-10-24-mise-by-language-1-python-and-uv/) | [`lang/python`](lang/python) |
+| 2 | [Node.js with npm and pnpm](https://hobbyworker.me/en/dev/2026-10-25-mise-by-language-2-nodejs-npm-pnpm/) | [`lang/node`](lang/node) |
+| 3 | [Ruby and Bundler](https://hobbyworker.me/en/dev/2026-10-26-mise-by-language-3-ruby-and-bundler/) | [`lang/ruby`](lang/ruby) |
+| 4 | [Java and Gradle](https://hobbyworker.me/en/dev/2026-10-27-mise-by-language-4-java-and-gradle/) | [`lang/java`](lang/java) |
+| 5 | [Rust and cargo](https://hobbyworker.me/en/dev/2026-10-28-mise-by-language-5-rust-and-cargo/) | [`lang/rust`](lang/rust) |
 
-The posts are published one per day from 2026-10-18 to 2026-10-28. Folders are added as their posts are written.
+The posts are published one per day from 2026-10-18 to 2026-10-28.
 
 ## Requirements
 
 - mise 2026.10.11 or later. Install it with `curl -fsSL https://mise.run | sh`.
 - Every other tool is installed by mise from each folder's `mise.toml` (`mise install`).
 
-Last checked on 2026-10-17 with mise 2026.10.11 on macOS (Apple Silicon) and in Ubuntu 24.04 containers. The CI workflow runs the `guide/` examples and builds the Docker image.
+Last checked on 2026-10-17 with mise 2026.10.11 on macOS (Apple Silicon) and in Ubuntu 24.04 containers. The CI workflow runs the `guide/` examples, runs `mise run ci` in each `lang/` folder, and builds the Docker image.
 
 ## License
 
