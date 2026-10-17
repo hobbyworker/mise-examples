@@ -82,7 +82,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        lang: [python, node, ruby, java, rust]
+        lang: [python, node, ruby, java, rust, hugo]
     defaults:
       run:
         working-directory: lang/${{ matrix.lang }}

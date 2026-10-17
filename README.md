@@ -17,7 +17,7 @@ Sample code for two series on hobbyworker.me: the [mise Guide](https://hobbywork
 
 ## mise by Language
 
-The same small program, a word counter with a test, in each language. Each folder has a `mise.toml` that pins the language and runs the language's own package tool.
+The same small program, a word counter with a test, in each language. Each folder has a `mise.toml` that pins the language and runs the language's own package tool. Part 6 is a small Hugo site instead, which needs Hugo and Go.
 
 | Part | Post | Folder |
 |---|---|---|
@@ -26,8 +26,9 @@ The same small program, a word counter with a test, in each language. Each folde
 | 3 | [Ruby and Bundler](https://hobbyworker.me/en/dev/2026-10-26-mise-by-language-3-ruby-and-bundler/) | [`lang/ruby`](lang/ruby) |
 | 4 | [Java and Gradle](https://hobbyworker.me/en/dev/2026-10-27-mise-by-language-4-java-and-gradle/) | [`lang/java`](lang/java) |
 | 5 | [Rust and cargo](https://hobbyworker.me/en/dev/2026-10-28-mise-by-language-5-rust-and-cargo/) | [`lang/rust`](lang/rust) |
+| 6 | [Hugo and Go](https://hobbyworker.me/en/dev/2026-10-29-mise-by-language-6-hugo-and-go/) | [`lang/hugo`](lang/hugo) |
 
-The posts are published one per day from 2026-10-18 to 2026-10-28.
+The posts are published one per day from 2026-10-18 to 2026-10-29.
 
 ## Requirements
 
