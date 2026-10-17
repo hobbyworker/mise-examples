@@ -22,7 +22,7 @@ The same small program, a word counter with a test, in each language. Each folde
 | Part | Post | Folder |
 |---|---|---|
 | 1 | [Python and uv](https://hobbyworker.me/en/dev/2026-10-24-mise-by-language-1-python-and-uv/) | [`lang/python`](lang/python) |
-| 2 | [Node.js with npm and pnpm](https://hobbyworker.me/en/dev/2026-10-25-mise-by-language-2-nodejs-npm-pnpm/) | [`lang/node`](lang/node) |
+| 2 | [Node.js, npm, and pnpm](https://hobbyworker.me/en/dev/2026-10-25-mise-by-language-2-nodejs-npm-pnpm/) | [`lang/node`](lang/node) |
 | 3 | [Ruby and Bundler](https://hobbyworker.me/en/dev/2026-10-26-mise-by-language-3-ruby-and-bundler/) | [`lang/ruby`](lang/ruby) |
 | 4 | [Java and Gradle](https://hobbyworker.me/en/dev/2026-10-27-mise-by-language-4-java-and-gradle/) | [`lang/java`](lang/java) |
 | 5 | [Rust and cargo](https://hobbyworker.me/en/dev/2026-10-28-mise-by-language-5-rust-and-cargo/) | [`lang/rust`](lang/rust) |

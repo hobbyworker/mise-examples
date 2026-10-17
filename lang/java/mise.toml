@@ -1,5 +1,5 @@
 [tools]
-java = "25"
+java = "temurin-25"
 
 [tasks.test]
 description = "Run the tests"
